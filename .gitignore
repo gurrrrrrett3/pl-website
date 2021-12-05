@@ -104,4 +104,6 @@ dist
 .tern-port
 
 # Compiled ts
-*.js
+/out/modules
+/out/routers
+index.js
