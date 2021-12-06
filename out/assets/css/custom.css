@@ -1,0 +1,70 @@
+.green {
+    color: var(--bs-green);
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centeredX {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.gun-container {
+    position: relative;
+    top: 48px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+    
+@media only screen and (max-width: 400px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
+
+.item {
+    display: inline-block;
+    max-width: 0.2vw
+}
+
+.card-text span {
+    font-weight: bold;
+    color: var(--bs-green);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    background-color: var(--bs-gray-900);
+    color: var(--bs-blue);
+    text-align: center;
+    padding: 0.5rem;
+}

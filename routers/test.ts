@@ -1,6 +1,7 @@
 import express from 'express';
 import codeGen from '../modules/codeGen';
 import UUID from '../modules/uuid';
+import path from 'path';
 
 const router = express.Router();
 
@@ -16,7 +17,7 @@ router.get('/uuid', (req, res) => {
 
 router.get('/gun', (req, res) => {
 
-    res.sendFile(__dirname, '../assets/pages/static/guntest.html');
+    res.sendFile(path.resolve(__dirname + '/../assets/pages/static/guntest.html'));
 })
 
 

@@ -1,12 +1,13 @@
 import path from 'path';
 import express = require('express');
+import SetLocalStorage from '../modules/setLocalStorage';
 const router = express.Router();
 
 router.get("/view/:gun", (req, res) => { 
 
     const code = req.params.gun;
 
-    res.send(`<a id="lnk"href="/gun"></a> <script>window.localStorage.setItem("gunID", "${code}");document.getElementById("lnk").click()</script> `);
+    res.send(SetLocalStorage("gunID", code, "/gun"));
 })
 
 router.get("/", (req, res) => {

@@ -1,52 +1,54 @@
-import fs from 'fs';
-import Gun from './gun';
+import fs from "fs";
+import Gun from "./gun";
 
 export default class Database {
+	public static getGun(code: string) {
+		if (fs.existsSync(`./data/guns.json`)) {
+			const guns = JSON.parse(fs.readFileSync(`./data/guns.json`, "utf8"));
 
-    public static getGun(code: string) {
+			const foundGun = guns.find((gun: Gun) => gun.code === code);
+			return foundGun;
+		} else {
+			fs.writeFileSync(`./data/guns.json`, JSON.stringify({}));
+			return null;
+		}
+	}
 
-        if (fs.existsSync(`./data/guns.json`)) {
+	public static saveGun(gun: Gun) {
+		if (fs.existsSync(`./data/guns.json`)) {
+			const guns = JSON.parse(fs.readFileSync(`./data/guns.json`, "utf8"));
 
-            const guns = JSON.parse(fs.readFileSync(`./data/guns.json`, 'utf8'));
+			guns.push(gun);
 
-            const foundGun = guns.find((gun: Gun) => gun.code === code);
-            return foundGun;
+			fs.writeFileSync(`./data/guns.json`, JSON.stringify(guns, null, 2));
+		} else {
+			fs.writeFileSync(`./data/guns.json`, JSON.stringify([gun]));
+		}
+	}
 
-        } else {
-                
-                fs.writeFileSync(`./data/guns.json`, JSON.stringify({}));
-                return null;
-    
-        }
+	public static deleteGun(uuid: string) {
+		if (fs.existsSync(`./data/guns.json`)) {
+			const guns = JSON.parse(fs.readFileSync(`./data/guns.json`, "utf8"));
 
-    }
+			const index = guns.findIndex((gun: Gun) => gun.gunUuid === uuid);
 
-    public static saveGun(gun: Gun) {
+			if (index !== -1) {
+				guns.splice(index, 1);
+			}
 
-        if (fs.existsSync(`./data/guns.json`)) {
+			fs.writeFileSync(`./data/guns.json`, JSON.stringify(guns, null, 2));
+		}
+	}
 
-            const guns = JSON.parse(fs.readFileSync(`./data/guns.json`, 'utf8'));
+	public static getGunsByUsername(username: string) {
+		if (fs.existsSync(`./data/guns.json`)) {
+			const guns = JSON.parse(fs.readFileSync(`./data/guns.json`, "utf8"));
 
-            const index = guns.findIndex((gun: Gun) => gun.code === gun.code);
-
-            if (index === -1) {
-
-                guns.push(gun);
-
-            } else {
-
-                guns[index] = gun;
-
-            }
-
-            fs.writeFileSync(`./data/guns.json`, JSON.stringify(guns, null, 2));
-
-        } else {
-
-            fs.writeFileSync(`./data/guns.json`, JSON.stringify([gun]));
-
-        }
-
-    }
-
+			const foundGuns: Gun[] = guns.filter((gun: Gun) => gun.username === username);
+			return foundGuns;
+		} else {
+			fs.writeFileSync(`./data/guns.json`, JSON.stringify({}));
+			return null;
+		}
+	}
 }

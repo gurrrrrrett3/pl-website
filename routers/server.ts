@@ -48,5 +48,23 @@ router.get("/gun/:id", (req, res) => {
 
 })
 
+router.get("/user/:username/guns", (req, res) => {
+
+    const user = Database.getGunsByUsername(req.params.username);
+
+    if(user) {
+        res.send({
+            success: true,
+            message: "User found",
+            userData: user
+        });
+    } else {
+        res.send({
+            success: false,
+            message: "User not found"
+        });
+    }
+})
+
 export default router;
 

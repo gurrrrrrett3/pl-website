@@ -15,8 +15,10 @@ document.getElementById("submit").addEventListener("click", function(event) {
     })
     .then(function(json) {
         if (json.success) {
-            alert("Successfully registered!");
-            window.location.href = "/";
+            username.value = "";
+            type.value = "";
+            cop.value = "";
+            alert(`Successfully registered! Your code is: ${json.gunData.code}`)
         } else {
             alert("Error: " + json.message);
         }

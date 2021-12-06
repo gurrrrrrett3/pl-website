@@ -1,11 +1,173 @@
 [
   {
-    "type": "ak-47",
-    "username": "Gucci_Garrett",
-    "userUuid": "a96e485a-5116-4bc4-b485-3790ae8cba51",
-    "gunUuid": "a2c92c6b-a7f3-4bdf-bc9c-e0a6f8d8cdac",
-    "registeredAt": "2021-12-05T06:31:27.941Z",
+    "type": "handgun",
+    "username": "SYNO",
+    "userUuid": "51b660ab-439c-4627-91ca-6c769f455ef0",
+    "gunUuid": "74d5e2a0-20eb-4593-bb0f-b0c9ebe6a62b",
+    "registeredAt": "2021-12-05T19:19:03.312Z",
     "registeredBy": "Gucci_Garrett",
-    "code": "NKBVOY"
+    "code": "GIOVVK"
+  },
+  {
+    "type": "handgun",
+    "username": "SYNO",
+    "userUuid": "cb95554a-a154-4373-ab6b-42bb5284a9d0",
+    "gunUuid": "321b161f-8e73-4cac-a49d-109653cf9cc4",
+    "registeredAt": "2021-12-05T19:21:22.536Z",
+    "registeredBy": "Gucci_Garrett",
+    "code": "OBAJKC"
+  },
+  {
+    "type": " Nuke RPG",
+    "username": "Trog",
+    "userUuid": "5dcff62e-bdc8-4614-9e7c-cadac5452bb0",
+    "gunUuid": "01b55f5f-defd-4d87-96b1-d28f39180f23",
+    "registeredAt": "2021-12-05T19:25:13.485Z",
+    "registeredBy": "Gucci_Garrett",
+    "code": "JUAUAE"
+  },
+  {
+    "type": "Cock Blaster",
+    "username": "Trog",
+    "userUuid": "f0ae113f-7357-48be-afcc-fa05888aa2c5",
+    "gunUuid": "6932f4fe-89f5-4191-8bb1-9f1109df7798",
+    "registeredAt": "2021-12-05T19:39:12.520Z",
+    "registeredBy": "Ur Mother",
+    "code": "BQIBHO"
+  },
+  {
+    "type": "P-45",
+    "username": "Trog",
+    "userUuid": "6228600d-2634-4e69-acb2-1ba93980c78d",
+    "gunUuid": "3655d0b2-9919-473a-976c-c3a4a3fea942",
+    "registeredAt": "2021-12-05T19:41:08.573Z",
+    "registeredBy": "Trog",
+    "code": "PEZFIE"
+  },
+  {
+    "type": "P-45",
+    "username": "Trog",
+    "userUuid": "de47a6a3-cc7c-4c80-b08b-528e34008e4e",
+    "gunUuid": "8dd89c7f-930e-4478-b0e4-9f3797783906",
+    "registeredAt": "2021-12-05T19:41:16.275Z",
+    "registeredBy": "Trog",
+    "code": "OEKWEA"
+  },
+  {
+    "type": "Pea Shooter",
+    "username": "Trog",
+    "userUuid": "56cd7359-06ca-448a-a278-4b329ff75756",
+    "gunUuid": "b3c973b4-408d-44ff-a8b2-7c69c7d42678",
+    "registeredAt": "2021-12-05T19:48:16.545Z",
+    "registeredBy": "Gucci",
+    "code": "IZUPIM"
+  },
+  {
+    "type": "Shooty Gun",
+    "username": "Trog",
+    "userUuid": "93022175-8b35-4ae5-af2b-8a390b63561a",
+    "gunUuid": "d3b7375a-4723-4acc-8cb0-2d8d3cfa0d5e",
+    "registeredAt": "2021-12-05T19:58:17.692Z",
+    "registeredBy": "Gort",
+    "code": "GJIKBW"
+  },
+  {
+    "type": "Laser Pistol ",
+    "username": "Trog",
+    "userUuid": "f16dcfe4-3476-4261-9743-f77334a8b7fc",
+    "gunUuid": "cf989b77-48dc-43d0-9eeb-896d21c0796e",
+    "registeredAt": "2021-12-05T20:07:15.843Z",
+    "registeredBy": "Space Man Jim",
+    "code": "HBZKDD"
+  },
+  {
+    "type": "Shooty Gun",
+    "username": "Trog",
+    "userUuid": "aa9a5df6-6c8b-472e-afba-7cb9f486207a",
+    "gunUuid": "75e9deaf-6b41-405b-bfb4-4a8e2dd75e75",
+    "registeredAt": "2021-12-05T20:59:23.819Z",
+    "registeredBy": "Gort",
+    "code": "HSOCDC"
+  },
+  {
+    "type": "Potato Cannon",
+    "username": "Trog",
+    "userUuid": "cfa593ca-4254-4086-b7a4-e2d1b51ae4bd",
+    "gunUuid": "3d92e6bd-1e45-45e0-b6ff-4ed4f5c4998a",
+    "registeredAt": "2021-12-05T21:00:41.688Z",
+    "registeredBy": "Gort",
+    "code": "RUSMBW"
+  },
+  {
+    "type": "A 5 year old child who really likes to throw rocks at people",
+    "username": "Trog",
+    "userUuid": "131f4983-a978-45d9-b382-f8870ba90077",
+    "gunUuid": "1f20b0aa-82e0-47ef-b736-76979de3210b",
+    "registeredAt": "2021-12-05T21:07:24.370Z",
+    "registeredBy": "Gort",
+    "code": "HJIOKG"
+  },
+  {
+    "type": "Exactly 75 Monkeys who like to lob their turds at people",
+    "username": "Trog",
+    "userUuid": "ee2002cd-7d6f-485c-92ee-cd9905e0bd48",
+    "gunUuid": "0009fc43-6799-4428-9eb7-879b1492d2dd",
+    "registeredAt": "2021-12-05T21:09:27.406Z",
+    "registeredBy": "Gort",
+    "code": "IDLGLT"
+  },
+  {
+    "type": "12 Angry Lobsters ",
+    "username": "Trog",
+    "userUuid": "90fc9c31-e758-4034-b122-e49c28c1b747",
+    "gunUuid": "c2b0b3de-ebce-4ac5-b2a5-109f408d2648",
+    "registeredAt": "2021-12-05T21:13:59.702Z",
+    "registeredBy": "Gort",
+    "code": "OYWUSX"
+  },
+  {
+    "type": "AK47",
+    "username": "SYNO",
+    "userUuid": "6909b2d3-44bf-4050-a74b-15a12d08c4ab",
+    "gunUuid": "8456ff17-df30-4efb-a2d6-0599bb386bb5",
+    "registeredAt": "2021-12-05T23:51:25.775Z",
+    "registeredBy": "Gucci_Garrett",
+    "code": "ZDYZSR"
+  },
+  {
+    "type": "AK47",
+    "username": "Bento",
+    "userUuid": "ca556d30-ae8c-4f1c-9c2a-76c040881106",
+    "gunUuid": "3ecab08c-4358-4a4e-b25e-be70ac7c1d0f",
+    "registeredAt": "2021-12-05T23:58:16.175Z",
+    "registeredBy": "Gucci_Garrett",
+    "code": "OGPCGJ"
+  },
+  {
+    "type": "P90",
+    "username": "Bento",
+    "userUuid": "fce08cfc-9bd8-486f-81dd-d42fba41bf42",
+    "gunUuid": "72ef4e0d-7781-40d8-838b-727436b13454",
+    "registeredAt": "2021-12-05T23:58:22.765Z",
+    "registeredBy": "Gucci_Garrett",
+    "code": "UIQPMM"
+  },
+  {
+    "type": "Uzi",
+    "username": "Bento",
+    "userUuid": "b8c963fb-a87e-429d-8c3d-0ffa45552a19",
+    "gunUuid": "e5b40938-7d96-4e6a-b431-2e9b14dc9891",
+    "registeredAt": "2021-12-05T23:58:28.660Z",
+    "registeredBy": "Gucci_Garrett",
+    "code": "NTCXVN"
+  },
+  {
+    "type": "Dildo Cannon",
+    "username": "Trog",
+    "userUuid": "94e2ee6e-73f2-4a50-9158-af106172a609",
+    "gunUuid": "e1ef204f-eca3-4b7b-8e8f-51bb67494de2",
+    "registeredAt": "2021-12-06T00:53:27.037Z",
+    "registeredBy": "Moist",
+    "code": "TUPRBG"
   }
 ]

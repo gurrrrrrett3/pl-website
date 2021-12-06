@@ -4,18 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
     <title>Guntest</title>
 </head>
 <body>
-    
-    <form id="form">
-        <input id="name" type="text" name="username" placeholder="username">
-        <input id="type" type="text" name="gunType" placeholder="ak-47">
-        <input id="cop" type="text" name="registeredBy" placeholder="Gucci_Garrett">
-        <input id="submit" type="submit" value="Submit">
-    </form>
+
+    <div class="centered">
+
+    <div class="form-group">
+        <label for="name" class="form-label mt-4">Username</label>
+        <input type="text" class="form-control" id="name" aria-describedby="username-help" placeholder="Gucci_Garrett">
+        <small id="username-help" class="form-text text-muted">User that owns the gun</small>
+      </div>
+
+      <div class="form-group">
+        <label for="type" class="form-label mt-4">Gun  Type</label>
+        <input type="text" class="form-control" id="type" aria-describedby="gunType-help" placeholder="AK-47">
+        <small id="gunType-help" class="form-text text-muted">Type of gun</small>
+      </div>
+
+      <div class="form-group">
+        <label for="cop" class="form-label mt-4">Sheriff</label>
+        <input type="text" class="form-control" id="cop" aria-describedby="cop-help" placeholder="Gucci_Garrett">
+        <small id="cop-help" class="form-text text-muted">Sheriff who registered the gun</small>
+      </div>
+
+      <input id="submit" type="submit" class="btn btn-primary mt-4" value="Submit">
+
+    </div>
+      
 
     <script src="/assets/js/guntest.js"></script>
 
 </body>
 </html>
+
+<style>
+
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+</style>
