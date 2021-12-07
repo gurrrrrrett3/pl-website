@@ -107,3 +107,6 @@ dist
 /out/modules
 /out/routers
 index.js
+
+#auth
+auth.json

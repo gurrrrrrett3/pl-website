@@ -3,11 +3,15 @@ import Gun from '../modules/gun';
 import { GunRegister } from '../modules/types/guns';
 
 import test from './test';
+import auth from './auth';
+
 import Database from '../modules/database';
 import UUID from '../modules/uuid';
 
 const router = express.Router();
+
 router.use("/test", test)
+router.use("/auth", auth)
 
 router.post('/gunregister', (req, res) => {
 

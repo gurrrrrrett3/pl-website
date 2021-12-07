@@ -13,4 +13,6 @@ router.get("/view/:gun", (req, res) => {
 router.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname + "/../assets/pages/static/gunid.html"));
 })
+
+
 export default router;
