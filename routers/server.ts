@@ -7,6 +7,8 @@ import auth from './auth';
 
 import Database from '../modules/database';
 import UUID from '../modules/uuid';
+import { Data } from '../modules/types/data';
+import codeGen from '../modules/codeGen';
 
 const router = express.Router();
 
@@ -26,23 +28,27 @@ router.post('/gunregister', (req, res) => {
     
     Database.saveGun(gun);
 
-    res.send({
+    const data: Data = {
         success: true,
         message: "Gun registered",
-        gunData: gun.dataToServer()
-    });
+        data: gun.dataToServer()
+}
 
+    res.send(data)
 })
+
 
 router.get("/gun/:id", (req, res) => {
     const gun = Database.getGun(req.params.id);
 
     if(gun) {
-        res.send({
+
+        const data: Data = {
             success: true,
             message: "Gun found",
-            gunData: gun
-        });
+            data: gun
+        }
+        res.send(data);
     } else {
         res.send({
             success: false,
@@ -57,18 +63,58 @@ router.get("/user/:username/guns", (req, res) => {
     const user = Database.getGunsByUsername(req.params.username);
 
     if(user) {
-        res.send({
+        const data: Data = {
             success: true,
             message: "User found",
-            userData: user
-        });
+            data: user
+        }
+        res.send(data);
     } else {
-        res.send({
+        const data: Data = {
             success: false,
-            message: "User not found"
-        });
+            message: "User not found",
+            data: null
+        }
+
+        res.send(data);
     }
 })
 
-export default router;
+router.get("/ping", (req, res) => {
+    const data: Data = {
+        success: true,
+        message: "Pong",
+        data: {
+            timestamp: Date.now(),
+            ip: req.ip
+        }
+    }
+    
+    res.send(data);
+})
 
+router.get('/code', (req, res) => {
+
+    res.send(codeGen.generate());
+})
+
+router.get('/json/code', (req, res) => {
+
+    res.send({    
+        code: codeGen.generate()
+    });
+})
+
+router.get('/uuid', (req, res) => {
+
+    res.send(UUID.generate());
+})
+
+router.get('/json/uuid', (req, res) => {
+
+    res.send({
+        code: UUID.generate()
+    });
+})
+
+export default router;

@@ -1,5 +1,6 @@
 import fs from "fs";
 import Gun from "./gun";
+import { ShopCode } from "./types/shopcode";
 
 export default class Database {
 	public static getGun(code: string) {
@@ -51,4 +52,36 @@ export default class Database {
 			return null;
 		}
 	}
+
+	public static saveShopCode(username: string, code: string, balance: number) {
+	
+		if (fs.existsSync(`./data/codes.json`)) {
+			const shop = JSON.parse(fs.readFileSync(`./data/codes.json`, "utf8"));
+
+			shop.push({
+				username: username,
+				code: code,
+				balance: balance
+			});
+
+			fs.writeFileSync(`./data/codes.json`, JSON.stringify(shop, null, 2));
+		} else {
+			fs.writeFileSync(`./data/codes.json`, JSON.stringify([]));
+		}
+		
+	}
+
+	public static getShopCode(code: string) {
+		if (fs.existsSync(`./data/codes.json`)) {
+			const shop = JSON.parse(fs.readFileSync(`./data/codes.json`, "utf8"));
+
+			const foundShop: ShopCode = shop.find((shop: any) => shop.code === code);
+			
+			return foundShop;
+		} else {
+			fs.writeFileSync(`./data/codes.json`, JSON.stringify([]));
+			return null;
+		}
+	}
+
 }
