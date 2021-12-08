@@ -1,0 +1,10 @@
+shotgun
+rifle
+pistol
+mini_gun
+machine_pistol
+heavy_pistol
+grenade_launcher
+assault_rifle
+bazooka
+heavy_rifle

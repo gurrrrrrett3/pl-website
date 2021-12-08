@@ -1,0 +1,64 @@
+{
+    "guns": [
+        {
+            "type": "shotgun",
+            "name": "Shotgun",
+            "price": 500,
+            "stocked": true
+        }, 
+        {
+            "type": "rifle",
+            "name": "Rifle",
+            "price": 320,
+            "stocked": true
+        }, 
+        {
+            "type": "pistol",
+            "name": "Pistol",
+            "price": 70,
+            "stocked": true
+        }, 
+         {
+            "type": "mini_gun",
+            "name": "Mini Gun",
+            "price": 600,
+            "stocked": true
+        }, 
+         {
+            "type": "machine_pistol",
+            "name": "Machine Pistol",
+            "price": 450,
+            "stocked": true
+        }, 
+        {
+            "type": "heavy_pistol",
+            "name": "Heavy Pistol",
+            "price": 225,
+            "stocked": true
+        }, 
+         {
+            "type": "grenade_launcher",
+            "name": "Grenade Launcher",
+            "price": 700,
+            "stocked": true
+        }, 
+        {
+            "type": "assault_rifle",
+            "name": "Assault Rifle",
+            "price": 600,
+            "stocked": true
+        }, 
+        {
+            "type": "bazooka",
+            "name": "Bazooka",
+            "price": 1000,
+            "stocked": true
+        }, 
+        {
+            "type": "heavy_rifle",
+            "name": "Heavy Rifle",
+            "price": 800,
+            "stocked": true
+        }
+    ]
+}

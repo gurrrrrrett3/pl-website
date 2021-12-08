@@ -68,3 +68,18 @@
     text-align: center;
     padding: 0.5rem;
 }
+
+.shop-total span {
+    font-weight: bold;
+    color: var(--bs-green);
+}
+
+.bottom {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    height: 2rem;
+    color: var(--bs-blue);
+    text-align: center;
+    padding: 0.5rem;
+}

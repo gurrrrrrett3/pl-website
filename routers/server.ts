@@ -4,16 +4,21 @@ import { GunRegister } from '../modules/types/guns';
 
 import test from './test';
 import auth from './auth';
+import comms from './comms';
 
 import Database from '../modules/database';
 import UUID from '../modules/uuid';
 import { Data } from '../modules/types/data';
 import codeGen from '../modules/codeGen';
 
+import prices from '../data/prices.json';
+import { ShopCode } from '../modules/types/shopcode';
+
 const router = express.Router();
 
 router.use("/test", test)
 router.use("/auth", auth)
+router.use("/comms", comms)
 
 router.post('/gunregister', (req, res) => {
 
@@ -89,8 +94,12 @@ router.get("/ping", (req, res) => {
             ip: req.ip
         }
     }
-    
+
     res.send(data);
+})
+
+router.get("/string/ping", (req, res) => {
+    res.send("Pong");
 })
 
 router.get('/code', (req, res) => {
@@ -115,6 +124,39 @@ router.get('/json/uuid', (req, res) => {
     res.send({
         code: UUID.generate()
     });
+})
+
+router.get('/prices', (req, res) => {
+
+    res.send(prices);
+
+}) 
+
+router.get('/shop/:code', (req, res) => {
+
+    const code = req.params.code.toString();
+
+    if (!code) {
+        res.send({
+            success: false,
+            message: "No code provided"
+        });
+        return;
+    }
+
+
+    const ShopData = Database.getShopCode(code)
+    
+    if (!ShopData) {
+        res.send({
+            success: false,
+            message: "Code not found"
+        });
+        return;
+    }
+
+    res.send(ShopData)
+
 })
 
 export default router;

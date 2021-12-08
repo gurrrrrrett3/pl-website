@@ -7,6 +7,7 @@ import users from './routers/users';
 import user from './routers/user';
 import gunshop from './routers/gunshop';
 
+export const URL = 'http://localhost';
 const port = 80
 const app = express()
 
