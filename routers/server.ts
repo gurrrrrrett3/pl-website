@@ -103,7 +103,7 @@ router.get("/ping", (req, res) => {
 })
 
 router.get("/string/ping", (req, res) => {
-    res.send("Pong");
+    res.send(`true,Pong,${Date.now()},${req.ip}`);
 })
 
 router.get('/code', (req, res) => {

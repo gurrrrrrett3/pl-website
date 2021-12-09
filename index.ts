@@ -6,6 +6,7 @@ import gun from './routers/gun';
 import users from './routers/users';
 import user from './routers/user';
 import gunshop from './routers/gunshop';
+import ytdl from './routers/ytdl';
 import { Bot } from './modules/bot';
 
 export const URL = 'http://localhost';
@@ -18,6 +19,7 @@ app.use("/gun", gun)
 app.use("/users", users)
 app.use("/user", user)
 app.use("/gunshop", gunshop)
+app.use("/yt", ytdl)
 app.use("/assets", express.static(path.join(__dirname, 'assets')))
 
 app.listen(port, () => {

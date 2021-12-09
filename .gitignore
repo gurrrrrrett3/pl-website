@@ -110,3 +110,6 @@ index.js
 
 #auth
 auth.json
+
+#Temp Files
+/out/tmp

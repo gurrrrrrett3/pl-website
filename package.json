@@ -6,7 +6,8 @@
     "cors": "^2.8.5",
     "discord-oauth2": "^2.8.0",
     "discord.js": "^13.3.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ytdl-core": "^4.9.1"
   },
   "name": "pl-website",
   "description": "",
