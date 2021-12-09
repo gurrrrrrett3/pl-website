@@ -1,7 +1,17 @@
 [
   {
     "username": "test",
-    "code": "IRSEOZ",
-    "balance": 300
+    "code": "MONEY",
+    "balance": 5265
+  },
+  {
+    "username": "Gucci_Garrett",
+    "code": "TXFIQB",
+    "balance": 1750
+  },
+  {
+    "username": "DEMO_ACCOUNT",
+    "code": "DEMO",
+    "balance": 1500
   }
 ]

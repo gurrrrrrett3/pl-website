@@ -19,7 +19,7 @@ router.get("/code/:code", (req, res) => {
         return;
     }
 
-	res.send(SetLocalStorage("data", code, "../"));
+	res.send(SetLocalStorage("code", code, "../"));
 })
 
 router.get("/", (req, res) => {

@@ -8,12 +8,45 @@
     <link rel="stylesheet" href="/assets/css/custom.css">
     <title>Loading...</title>
 </head>
-<body>
+<body class="hideOverflowX">
+
     <h1 class="green centeredX">Shop</h1>
 
-    <div class="shop-total centeredX bottom"><h1><span>Total Cost: </span><p id="price">$0</p></h1></div>
+    <div id="gun-container" class="container"></div>
 
-    <div id="gun-container" class="container gun-container"></div>
+    <div class="row">
+        <button class="btn btn-lg btn-primary" type="button" id="buy">Buy</button>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col">
+             <div class="shop-total">
+        <h1>
+            <span>Total Cost:</span>
+            <p id="price">$0</p>
+        </h1>
+
+        </div>
+       
+    </div>
+    <div class="col">
+        <h1 class="flex center-text-align">
+            <span class="green">Balance:</span>
+            <p id="balance">$0</p>
+            <span class="green"> => </span>
+            <p id="balance-after" class="red">$0</p>
+        </h1>
+    </div>
+
+    <div class="col">
+        <h1 class="flex">
+            <span class="green" id="username">Loading...</span>
+        </h1>
+    </div>
+
+</div>
     
     <script src="/assets/js/shop.js"></script>
 </body>

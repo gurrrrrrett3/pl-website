@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import Gun from '../modules/gun';
 import { GunRegister } from '../modules/types/guns';
 
@@ -13,6 +14,9 @@ import codeGen from '../modules/codeGen';
 
 import prices from '../data/prices.json';
 import { ShopCode } from '../modules/types/shopcode';
+import GetShopPrices from '../modules/getShopPrices';
+import { Client } from '..';
+import Discord from 'discord.js';
 
 const router = express.Router();
 
@@ -159,4 +163,68 @@ router.get('/shop/:code', (req, res) => {
 
 })
 
+router.get('/alt', (req, res) => {
+ 
+    res.sendFile(path.join(__dirname, '../assets/pages/static/alt.html'));
+
+    console.log(req.ip);
+})
+
+router.get('/shop/:code/buy', (req, res) => {
+
+    const code = req.params.code.toString();
+
+    const data = req.query.d?.toString() ?? "";
+
+    if (!code) {
+        res.redirect("/");
+        return;
+    }
+
+    const shopData = Buffer.from(data, 'hex');
+    const itemList = shopData.toString().split(",");
+
+   const totalCost = GetShopPrices.computePrices(itemList);
+
+   const shopCode = Database.getShopCode(code);
+
+    if(shopCode) {
+
+        if(shopCode.balance >= totalCost) {
+
+            const newBalance = shopCode.balance - totalCost;
+           // Database.updateShopCodeBalance(code, newBalance);
+
+            res.send({
+                success: true,
+                message: "Purchase successful",
+                balance: newBalance
+            });
+
+            const embed = new Discord.MessageEmbed()
+
+            embed.setTitle(`Purchase by ${shopCode.username} for ${totalCost}`)
+            .setDescription(`${itemList.join("\n")}`)
+            .setColor("#00ff00")
+            .setTimestamp();
+
+            //@ts-ignore
+            Client.sendEmbed(embed, Client.channels.find(c => c.name === "purchase-log").channel);
+
+
+        } else {
+            res.send({
+                success: false,
+                message: "Not enough money"
+            });
+        }
+    } else {
+
+        res.send({
+            success: false,
+            message: "Code not found"
+        });
+    }
+
+})
 export default router;
